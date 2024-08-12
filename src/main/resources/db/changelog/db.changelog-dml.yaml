@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: mostafa
+      changes:
+        - insert:
+            tableName: conference_room
+            columns:
+              - column:
+                  name: name
+                  value: Amaze
+              - column:
+                  name: capacity
+                  value: 3
+        - insert:
+            tableName: conference_room
+            columns:
+              - column:
+                  name: name
+                  value: Beauty
+              - column:
+                  name: capacity
+                  value: 7
+        - insert:
+            tableName: conference_room
+            columns:
+              - column:
+                  name: name
+                  value: Inspire
+              - column:
+                  name: capacity
+                  value: 12
+        - insert:
+            tableName: conference_room
+            columns:
+              - column:
+                  name: name
+                  value: Strive
+              - column:
+                  name: capacity
+                  value: 20

@@ -1,0 +1,769 @@
+2024-08-13T00:07:22.426+04:00  INFO 11467 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Starting ConferenceRoomBookingServiceApplication using Java 17.0.7 with PID 11467 (/Users/mostafarady/MashreqTask/conference-room-booking-service/target/classes started by mostafarady in /Users/mostafarady/MashreqTask/conference-room-booking-service)
+2024-08-13T00:07:22.446+04:00 DEBUG 11467 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-13T00:07:22.448+04:00  INFO 11467 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-13T00:07:23.510+04:00  INFO 11467 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-13T00:07:23.600+04:00  INFO 11467 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2024-08-13T00:07:24.391+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-13T00:07:24.406+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-13T00:07:24.407+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-13T00:07:24.512+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-13T00:07:24.513+04:00  INFO 11467 --- [conference-room-booking-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1997 ms
+2024-08-13T00:07:24.557+04:00  INFO 11467 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-13T00:07:24.821+04:00  INFO 11467 --- [conference-room-booking-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-13T00:07:24.823+04:00  INFO 11467 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-13T00:07:24.836+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-13T00:07:25.079+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-08-13T00:07:25.423+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.command                        : Logging exception.
+2024-08-13T00:07:25.423+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Details
+2024-08-13T00:07:25.424+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Class:  ChangeLogParseException
+2024-08-13T00:07:25.424+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  classpath:db/changelog/db.changelog-master.yaml does not exist
+2024-08-13T00:07:25.424+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Source:  4.27.0
+2024-08-13T00:07:25.424+04:00  INFO 11467 --- [conference-room-booking-service] [main] liquibase.command                        : Command execution complete
+2024-08-13T00:07:25.428+04:00  WARN 11467 --- [conference-room-booking-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.ChangeLogParseException: classpath:db/changelog/db.changelog-master.yaml does not exist
+2024-08-13T00:07:25.428+04:00  INFO 11467 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-13T00:07:25.432+04:00  INFO 11467 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-13T00:07:25.436+04:00  INFO 11467 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-13T00:07:25.452+04:00  INFO 11467 --- [conference-room-booking-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-13T00:07:25.474+04:00 ERROR 11467 --- [conference-room-booking-service] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Liquibase failed to start because no changelog could be found at 'classpath:db/changelog/db.changelog-master.yaml'.
+
+Action:
+
+Make sure a Liquibase changelog is present at the configured path.
+
+2024-08-13T00:08:26.610+04:00  INFO 11471 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Starting ConferenceRoomBookingServiceApplication using Java 17.0.7 with PID 11471 (/Users/mostafarady/MashreqTask/conference-room-booking-service/target/classes started by mostafarady in /Users/mostafarady/MashreqTask/conference-room-booking-service)
+2024-08-13T00:08:26.620+04:00 DEBUG 11471 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-13T00:08:26.622+04:00  INFO 11471 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-13T00:08:27.755+04:00  INFO 11471 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-13T00:08:27.835+04:00  INFO 11471 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2024-08-13T00:08:28.631+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-13T00:08:28.647+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-13T00:08:28.647+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-13T00:08:28.734+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-13T00:08:28.735+04:00  INFO 11471 --- [conference-room-booking-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2012 ms
+2024-08-13T00:08:28.776+04:00  INFO 11471 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-13T00:08:29.083+04:00  INFO 11471 --- [conference-room-booking-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-13T00:08:29.092+04:00  INFO 11471 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-13T00:08:29.107+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-13T00:08:29.348+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-08-13T00:08:29.801+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-13T00:08:30.060+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:08:30.154+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-08-13T00:08:30.156+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.command                        : Using deploymentId: 3493310155
+2024-08-13T00:08:30.158+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:08:30.197+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-ddl.yaml::1::mostafa
+2024-08-13T00:08:30.205+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table conference_room created
+2024-08-13T00:08:30.214+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table booking created
+2024-08-13T00:08:30.214+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-ddl.yaml::1::mostafa ran successfully in 15ms
+2024-08-13T00:08:30.225+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-ddl.yaml::2::yourname
+2024-08-13T00:08:30.227+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:08:30.229+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:08:30.230+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:08:30.232+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:08:30.233+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-ddl.yaml::2::yourname ran successfully in 8ms
+2024-08-13T00:08:30.239+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-dml.yaml::2::mostafa
+2024-08-13T00:08:30.242+04:00 ERROR 11471 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-dml.yaml::2::mostafa encountered an exception.
+
+liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:473) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:80) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:182) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:764) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:122) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:256) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:260) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:219) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:234) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:212) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:256) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242) ~[liquibase-core-4.27.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.mashreq.booking.ConferenceRoomBookingServiceApplication.main(ConferenceRoomBookingServiceApplication.java:13) ~[classes/:na]
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:527) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Command.executeUpdate(Command.java:256) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:467) ~[liquibase-core-4.27.0.jar:na]
+	... 63 common frames omitted
+
+2024-08-13T00:08:30.257+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-08-13T00:08:30.257+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : Run:                          2
+2024-08-13T00:08:30.257+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : Previously run:               0
+2024-08-13T00:08:30.257+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : Filtered out:                 0
+2024-08-13T00:08:30.258+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : -------------------------------
+2024-08-13T00:08:30.258+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : Total change sets:            2
+2024-08-13T00:08:30.259+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.util                           : Update summary generated
+2024-08-13T00:08:30.264+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.command                        : Update command encountered an exception.
+2024-08-13T00:08:30.267+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-08-13T00:08:30.270+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.command                        : Logging exception.
+2024-08-13T00:08:30.270+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Details
+2024-08-13T00:08:30.271+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Class:  JdbcSQLIntegrityConstraintViolationException
+2024-08-13T00:08:30.271+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Reason:  Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224]
+2024-08-13T00:08:30.271+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.ui                             : ERROR: Exception Primary Source:  H2 2.2.224 (2023-09-17)
+2024-08-13T00:08:30.271+04:00  INFO 11471 --- [conference-room-booking-service] [main] liquibase.command                        : Command execution complete
+2024-08-13T00:08:30.274+04:00  WARN 11471 --- [conference-room-booking-service] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+2024-08-13T00:08:30.275+04:00  INFO 11471 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-13T00:08:30.282+04:00  INFO 11471 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-13T00:08:30.293+04:00  INFO 11471 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-13T00:08:30.325+04:00  INFO 11471 --- [conference-room-booking-service] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-13T00:08:30.385+04:00 ERROR 11471 --- [conference-room-booking-service] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'liquibase' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.2.jar:3.3.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.2.jar:3.3.2]
+	at com.mashreq.booking.ConferenceRoomBookingServiceApplication.main(ConferenceRoomBookingServiceApplication.java:13) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 10 common frames omitted
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:259) ~[liquibase-core-4.27.0.jar:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.11.jar:6.1.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.11.jar:6.1.11]
+	... 17 common frames omitted
+Caused by: liquibase.exception.CommandExecutionException: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.command.CommandScope.execute(CommandScope.java:257) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.lambda$update$0(Liquibase.java:245) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.runInScope(Liquibase.java:1436) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:234) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Liquibase.update(Liquibase.java:212) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:297) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:249) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:256) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:242) ~[liquibase-core-4.27.0.jar:na]
+	... 19 common frames omitted
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:151) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.lambda$run$0(AbstractUpdateCommandStep.java:112) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.AbstractUpdateCommandStep.run(AbstractUpdateCommandStep.java:110) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.core.UpdateCommandStep.run(UpdateCommandStep.java:105) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.command.CommandScope.execute(CommandScope.java:219) ~[liquibase-core-4.27.0.jar:na]
+	... 35 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/db.changelog-dml.yaml::2::mostafa:
+     Reason: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:808) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.executeAcceptedChange(UpdateVisitor.java:119) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:68) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$0(ChangeLogIterator.java:133) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:122) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.lambda$child$0(Scope.java:190) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:199) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:189) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:168) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:256) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.Scope.child(Scope.java:260) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:89) ~[liquibase-core-4.27.0.jar:na]
+	... 43 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224] [Failed SQL: (23505) INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3')]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:473) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:80) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:182) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.executor.AbstractExecutor.execute(AbstractExecutor.java:141) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1176) ~[liquibase-core-4.27.0.jar:na]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:764) ~[liquibase-core-4.27.0.jar:na]
+	... 58 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PUBLIC.PRIMARY_KEY_4 ON PUBLIC.CONFERENCE_ROOM(NAME) VALUES ( /* 1 */ 'Amaze' )"; SQL statement:
+INSERT INTO PUBLIC.conference_room (name, capacity) VALUES ('Amaze', '3') [23505-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:527) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:223) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:184) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:519) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.Insert.update(Insert.java:135) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.command.Command.executeUpdate(Command.java:256) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262) ~[h2-2.2.224.jar:2.2.224]
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.2.224.jar:2.2.224]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:467) ~[liquibase-core-4.27.0.jar:na]
+	... 63 common frames omitted
+
+2024-08-13T00:10:38.591+04:00  INFO 11481 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Starting ConferenceRoomBookingServiceApplication using Java 17.0.7 with PID 11481 (/Users/mostafarady/MashreqTask/conference-room-booking-service/target/classes started by mostafarady in /Users/mostafarady/MashreqTask/conference-room-booking-service)
+2024-08-13T00:10:38.594+04:00 DEBUG 11481 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-13T00:10:38.596+04:00  INFO 11481 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-13T00:10:39.724+04:00  INFO 11481 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-13T00:10:39.810+04:00  INFO 11481 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2024-08-13T00:10:40.716+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-13T00:10:40.732+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-13T00:10:40.733+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-13T00:10:40.845+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-13T00:10:40.846+04:00  INFO 11481 --- [conference-room-booking-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2156 ms
+2024-08-13T00:10:40.896+04:00  INFO 11481 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-13T00:10:41.195+04:00  INFO 11481 --- [conference-room-booking-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-13T00:10:41.197+04:00  INFO 11481 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-13T00:10:41.211+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-13T00:10:41.457+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-08-13T00:10:41.920+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-13T00:10:42.042+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:10:42.153+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-08-13T00:10:42.155+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.command                        : Using deploymentId: 3493442154
+2024-08-13T00:10:42.160+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:10:42.203+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-ddl.yaml::1::mostafa
+2024-08-13T00:10:42.211+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table conference_room created
+2024-08-13T00:10:42.220+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table booking created
+2024-08-13T00:10:42.221+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-ddl.yaml::1::mostafa ran successfully in 17ms
+2024-08-13T00:10:42.234+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-dml.yaml::2::mostafa
+2024-08-13T00:10:42.237+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:10:42.239+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:10:42.241+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:10:42.242+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:10:42.243+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-dml.yaml::2::mostafa ran successfully in 8ms
+2024-08-13T00:10:42.253+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-08-13T00:10:42.253+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : Run:                          2
+2024-08-13T00:10:42.253+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : Previously run:               0
+2024-08-13T00:10:42.254+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : Filtered out:                 0
+2024-08-13T00:10:42.254+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : -------------------------------
+2024-08-13T00:10:42.254+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : Total change sets:            2
+2024-08-13T00:10:42.255+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.util                           : Update summary generated
+2024-08-13T00:10:42.259+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.command                        : Update command completed successfully.
+2024-08-13T00:10:42.259+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 6
+2024-08-13T00:10:42.261+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-08-13T00:10:42.262+04:00  INFO 11481 --- [conference-room-booking-service] [main] liquibase.command                        : Command execution complete
+2024-08-13T00:10:42.380+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-13T00:10:42.508+04:00  INFO 11481 --- [conference-room-booking-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-13T00:10:42.571+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-13T00:10:42.947+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-13T00:10:43.012+04:00  WARN 11481 --- [conference-room-booking-service] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-13T00:10:43.876+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-13T00:10:43.879+04:00  INFO 11481 --- [conference-room-booking-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-13T00:10:44.490+04:00  WARN 11481 --- [conference-room-booking-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-13T00:10:45.165+04:00  INFO 11481 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-13T00:10:45.182+04:00  INFO 11481 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Started ConferenceRoomBookingServiceApplication in 7.216 seconds (process running for 8.111)
+2024-08-13T00:12:46.806+04:00  INFO 11481 --- [conference-room-booking-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-13T00:12:46.811+04:00  INFO 11481 --- [conference-room-booking-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-13T00:12:46.814+04:00  INFO 11481 --- [conference-room-booking-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-13T00:12:49.510+04:00  INFO 11492 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Starting ConferenceRoomBookingServiceApplication using Java 17.0.7 with PID 11492 (/Users/mostafarady/MashreqTask/conference-room-booking-service/target/classes started by mostafarady in /Users/mostafarady/MashreqTask/conference-room-booking-service)
+2024-08-13T00:12:49.513+04:00 DEBUG 11492 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-13T00:12:49.515+04:00  INFO 11492 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-13T00:12:50.771+04:00  INFO 11492 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-13T00:12:50.855+04:00  INFO 11492 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interface.
+2024-08-13T00:12:51.646+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-13T00:12:51.662+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-13T00:12:51.663+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-13T00:12:51.758+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-13T00:12:51.759+04:00  INFO 11492 --- [conference-room-booking-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2131 ms
+2024-08-13T00:12:51.804+04:00  INFO 11492 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-13T00:12:52.079+04:00  INFO 11492 --- [conference-room-booking-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-13T00:12:52.082+04:00  INFO 11492 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-13T00:12:52.097+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-13T00:12:52.348+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-08-13T00:12:52.811+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-13T00:12:52.957+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:12:53.062+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-08-13T00:12:53.063+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.command                        : Using deploymentId: 3493573063
+2024-08-13T00:12:53.066+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:12:53.095+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-ddl.yaml::1::mostafa
+2024-08-13T00:12:53.103+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table conference_room created
+2024-08-13T00:12:53.110+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table booking created
+2024-08-13T00:12:53.111+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-ddl.yaml::1::mostafa ran successfully in 13ms
+2024-08-13T00:12:53.121+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-dml.yaml::2::mostafa
+2024-08-13T00:12:53.123+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:12:53.124+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:12:53.125+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:12:53.127+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:12:53.127+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-dml.yaml::2::mostafa ran successfully in 6ms
+2024-08-13T00:12:53.135+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-08-13T00:12:53.135+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : Run:                          2
+2024-08-13T00:12:53.135+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : Previously run:               0
+2024-08-13T00:12:53.136+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : Filtered out:                 0
+2024-08-13T00:12:53.136+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : -------------------------------
+2024-08-13T00:12:53.136+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : Total change sets:            2
+2024-08-13T00:12:53.137+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.util                           : Update summary generated
+2024-08-13T00:12:53.139+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.command                        : Update command completed successfully.
+2024-08-13T00:12:53.139+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 6
+2024-08-13T00:12:53.141+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-08-13T00:12:53.143+04:00  INFO 11492 --- [conference-room-booking-service] [main] liquibase.command                        : Command execution complete
+2024-08-13T00:12:53.226+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-13T00:12:53.307+04:00  INFO 11492 --- [conference-room-booking-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-13T00:12:53.396+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-13T00:12:53.788+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-13T00:12:53.857+04:00  WARN 11492 --- [conference-room-booking-service] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-13T00:12:55.030+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-13T00:12:55.035+04:00  INFO 11492 --- [conference-room-booking-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-13T00:12:55.620+04:00  WARN 11492 --- [conference-room-booking-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-13T00:12:56.194+04:00  INFO 11492 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-13T00:12:56.210+04:00  INFO 11492 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Started ConferenceRoomBookingServiceApplication in 7.499 seconds (process running for 8.294)
+2024-08-13T00:13:07.633+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-13T00:13:07.633+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-13T00:13:07.635+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-13T00:13:08.668+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 550 ms
+2024-08-13T00:13:15.885+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-6] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:13:15.888+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-6] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:13:16.065+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-6] c.m.booking.service.BookingServiceImpl   : Room Amaze is available
+2024-08-13T00:13:16.066+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-6] c.m.booking.service.BookingServiceImpl   : Room Amaze booked successfully
+2024-08-13T00:13:23.409+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-2] c.m.b.exception.GlobalExceptionHandler   : globalExceptionHandler [No static resource favicon.ico.]
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-13T00:13:27.492+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-6] c.m.b.exception.GlobalExceptionHandler   : globalExceptionHandler [No static resource favicon.ico.]
+
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-13T00:14:30.177+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:30.177+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:30.186+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Room Beauty is available
+2024-08-13T00:14:30.186+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Room Beauty booked successfully
+2024-08-13T00:14:42.194+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-9] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:42.195+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-9] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:42.201+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-9] c.m.booking.service.BookingServiceImpl   : Room Inspire is available
+2024-08-13T00:14:42.202+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-9] c.m.booking.service.BookingServiceImpl   : Room Inspire booked successfully
+2024-08-13T00:14:43.151+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:43.151+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:43.168+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] c.m.booking.service.BookingServiceImpl   : Room Strive is available
+2024-08-13T00:14:43.169+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-1] c.m.booking.service.BookingServiceImpl   : Room Strive booked successfully
+2024-08-13T00:14:50.697+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:50.697+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:50.708+04:00  WARN 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : No available rooms for 1 attendees from 05:13 to 20:37
+2024-08-13T00:14:50.708+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.booking.service.BookingServiceImpl   : No available room for the specified time and attendees.
+2024-08-13T00:14:50.718+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-4] c.m.b.exception.GlobalExceptionHandler   : RoomNotAvailableExceptionHandler [No available room for the specified time and attendees.]
+
+com.mashreq.booking.exception.RoomNotAvailableException: No available room for the specified time and attendees.
+	at com.mashreq.booking.service.BookingServiceImpl.bookRoom(BookingServiceImpl.java:80) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379) ~[spring-tx-6.1.11.jar:6.1.11]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.11.jar:6.1.11]
+	at com.mashreq.booking.service.BookingServiceImpl$$SpringCGLIB$$0.bookRoom(<generated>) ~[classes/:na]
+	at com.mashreq.booking.controller.BookingController.bookRoom(BookingController.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.11.jar:6.1.11]
+	at com.mashreq.booking.controller.BookingController$$SpringCGLIB$$0.bookRoom(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-13T00:16:08.331+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-5] c.m.booking.service.BookingServiceImpl   : Getting bookings on 2024-08-13 from 05:13 to 20:37
+2024-08-13T00:16:59.385+04:00  INFO 11492 --- [conference-room-booking-service] [http-nio-8080-exec-10] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 05:15 to 05:20
+2024-08-13T00:16:59.385+04:00 DEBUG 11492 --- [conference-room-booking-service] [http-nio-8080-exec-10] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 05:15 to 05:20
+2024-08-13T00:16:59.397+04:00  WARN 11492 --- [conference-room-booking-service] [http-nio-8080-exec-10] c.m.booking.service.BookingServiceImpl   : No available rooms for 1 attendees from 05:15 to 05:20
+2024-08-13T00:16:59.398+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-10] c.m.booking.service.BookingServiceImpl   : No available room for the specified time and attendees.
+2024-08-13T00:16:59.399+04:00 ERROR 11492 --- [conference-room-booking-service] [http-nio-8080-exec-10] c.m.b.exception.GlobalExceptionHandler   : RoomNotAvailableExceptionHandler [No available room for the specified time and attendees.]
+
+com.mashreq.booking.exception.RoomNotAvailableException: No available room for the specified time and attendees.
+	at com.mashreq.booking.service.BookingServiceImpl.bookRoom(BookingServiceImpl.java:80) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379) ~[spring-tx-6.1.11.jar:6.1.11]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.11.jar:6.1.11]
+	at com.mashreq.booking.service.BookingServiceImpl$$SpringCGLIB$$0.bookRoom(<generated>) ~[classes/:na]
+	at com.mashreq.booking.controller.BookingController.bookRoom(BookingController.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:174) ~[spring-context-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.11.jar:6.1.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.11.jar:6.1.11]
+	at com.mashreq.booking.controller.BookingController$$SpringCGLIB$$0.bookRoom(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.11.jar:6.1.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.11.jar:6.1.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.26.jar:10.1.26]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2024-08-13T00:17:22.450+04:00  INFO 11492 --- [conference-room-booking-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-13T00:17:22.457+04:00  INFO 11492 --- [conference-room-booking-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-13T00:17:22.459+04:00  INFO 11492 --- [conference-room-booking-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-13T00:17:25.344+04:00  INFO 11514 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Starting ConferenceRoomBookingServiceApplication using Java 17.0.7 with PID 11514 (/Users/mostafarady/MashreqTask/conference-room-booking-service/target/classes started by mostafarady in /Users/mostafarady/MashreqTask/conference-room-booking-service)
+2024-08-13T00:17:25.357+04:00 DEBUG 11514 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-13T00:17:25.360+04:00  INFO 11514 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : No active profile set, falling back to 1 default profile: "default"
+2024-08-13T00:17:26.777+04:00  INFO 11514 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-13T00:17:26.853+04:00  INFO 11514 --- [conference-room-booking-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2024-08-13T00:17:27.585+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-13T00:17:27.602+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-13T00:17:27.602+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-13T00:17:27.691+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-13T00:17:27.691+04:00  INFO 11514 --- [conference-room-booking-service] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2155 ms
+2024-08-13T00:17:27.726+04:00  INFO 11514 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-13T00:17:27.990+04:00  INFO 11514 --- [conference-room-booking-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-13T00:17:27.993+04:00  INFO 11514 --- [conference-room-booking-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-13T00:17:28.006+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-13T00:17:28.240+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.database                       : Set default schema name to PUBLIC
+2024-08-13T00:17:28.709+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : Creating database history table with name: PUBLIC.DATABASECHANGELOG
+2024-08-13T00:17:28.851+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:17:28.977+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2024-08-13T00:17:28.979+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.command                        : Using deploymentId: 3493848979
+2024-08-13T00:17:28.982+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2024-08-13T00:17:29.021+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-ddl.yaml::1::mostafa
+2024-08-13T00:17:29.030+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table conference_room created
+2024-08-13T00:17:29.039+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : Table booking created
+2024-08-13T00:17:29.040+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-ddl.yaml::1::mostafa ran successfully in 17ms
+2024-08-13T00:17:29.054+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.ui                             : Running Changeset: db/changelog/db.changelog-dml.yaml::2::mostafa
+2024-08-13T00:17:29.056+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:17:29.058+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:17:29.061+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:17:29.063+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : New row inserted into conference_room
+2024-08-13T00:17:29.064+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.changelog                      : ChangeSet db/changelog/db.changelog-dml.yaml::2::mostafa ran successfully in 10ms
+2024-08-13T00:17:29.075+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : UPDATE SUMMARY
+2024-08-13T00:17:29.076+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : Run:                          2
+2024-08-13T00:17:29.076+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : Previously run:               0
+2024-08-13T00:17:29.076+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : Filtered out:                 0
+2024-08-13T00:17:29.076+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : -------------------------------
+2024-08-13T00:17:29.076+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : Total change sets:            2
+2024-08-13T00:17:29.078+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.util                           : Update summary generated
+2024-08-13T00:17:29.081+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.command                        : Update command completed successfully.
+2024-08-13T00:17:29.082+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 6
+2024-08-13T00:17:29.084+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.lockservice                    : Successfully released change log lock
+2024-08-13T00:17:29.085+04:00  INFO 11514 --- [conference-room-booking-service] [main] liquibase.command                        : Command execution complete
+2024-08-13T00:17:29.175+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-13T00:17:29.282+04:00  INFO 11514 --- [conference-room-booking-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-13T00:17:29.347+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-13T00:17:29.735+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-13T00:17:29.801+04:00  WARN 11514 --- [conference-room-booking-service] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-13T00:17:30.815+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-13T00:17:30.819+04:00  INFO 11514 --- [conference-room-booking-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-13T00:17:31.401+04:00  WARN 11514 --- [conference-room-booking-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-13T00:17:31.962+04:00  INFO 11514 --- [conference-room-booking-service] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-13T00:17:31.977+04:00  INFO 11514 --- [conference-room-booking-service] [main] .ConferenceRoomBookingServiceApplication : Started ConferenceRoomBookingServiceApplication in 7.582 seconds (process running for 8.651)
+2024-08-13T00:19:18.192+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-13T00:19:18.193+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-13T00:19:18.195+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-13T00:19:19.116+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 497 ms
+2024-08-13T00:19:41.815+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-5] c.m.booking.service.BookingServiceImpl   : Booking room for 1 attendees from 20:00 to 20:10
+2024-08-13T00:19:41.817+04:00 DEBUG 11514 --- [conference-room-booking-service] [http-nio-8080-exec-5] c.m.booking.service.BookingServiceImpl   : Finding available room for 1 attendees from 20:00 to 20:10
+2024-08-13T00:19:41.946+04:00 DEBUG 11514 --- [conference-room-booking-service] [http-nio-8080-exec-5] c.m.booking.service.BookingServiceImpl   : Room Amaze is available
+2024-08-13T00:19:41.946+04:00  INFO 11514 --- [conference-room-booking-service] [http-nio-8080-exec-5] c.m.booking.service.BookingServiceImpl   : Room Amaze booked successfully
+2024-08-13T00:24:27.913+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s774ms), soft-evicting connections from pool.
+2024-08-13T00:33:54.995+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m27s82ms).
+2024-08-13T00:49:09.419+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m44s368ms).
+2024-08-13T01:09:16.860+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m37s436ms).
+2024-08-13T01:09:46.500+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s640ms), soft-evicting connections from pool.
+2024-08-13T01:11:22.426+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s926ms).
+2024-08-13T01:19:30.357+04:00  WARN 11514 --- [conference-room-booking-service] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m37s886ms).
