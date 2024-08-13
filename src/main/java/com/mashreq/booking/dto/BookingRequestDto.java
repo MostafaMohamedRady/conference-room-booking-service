@@ -17,7 +17,7 @@ public class BookingRequestDto {
     @Schema(name = "attendees", description = "Number of People Attending.")
     @NotNull(message = "Number of attendees is required")
     @Min(value = 1, message = "Number of attendees must be at least 1.")
-    private int attendees;
+    private Integer attendees;
 
     @Schema(name = "startTime", description = "Meeting Start Time.")
     @NotNull(message = "Start time is required")

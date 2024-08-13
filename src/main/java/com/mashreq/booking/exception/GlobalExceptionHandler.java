@@ -20,10 +20,19 @@ public class GlobalExceptionHandler {
         log.error("RoomNotAvailableExceptionHandler [{}]", e.getMessage(), e);
         ErrorMessage errorMessage = ErrorMessage.builder()
                 .message(e.getMessage())
-                .description("NOT_FOUND_ERROR")
-                .statusCode(HttpStatus.NOT_FOUND.value())
+                .statusCode(e.getStatusCode())
                 .timestamp(new Date()).build();
         return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(InvalidBookingRequestException.class)
+    public ResponseEntity<ErrorMessage> handleInvalidBookingRequestException(InvalidBookingRequestException e) {
+        log.error("InvalidBookingRequestException [{}]", e.getMessage(), e);
+        ErrorMessage errorMessage = ErrorMessage.builder()
+                .message(e.getMessage())
+                .statusCode(e.getStatusCode())
+                .timestamp(new Date()).build();
+        return new ResponseEntity<>(errorMessage, HttpStatus.OK);
     }
 
     @ExceptionHandler
@@ -39,8 +48,7 @@ public class GlobalExceptionHandler {
 
         ErrorMessage errorMessage = ErrorMessage.builder()
                 .message(msg.toString())
-                .description("VALIDATION_ERROR")
-                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .statusCode(HttpStatus.BAD_REQUEST.name())
                 .timestamp(new Date()).build();
         return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
     }
@@ -50,8 +58,7 @@ public class GlobalExceptionHandler {
         log.error("globalExceptionHandler [{}]", e.getMessage(), e);
         ErrorMessage errorMessage = ErrorMessage.builder()
                 .message(e.getMessage())
-                .description("INTERNAL_SERVER_ERROR")
-                .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.value())
+                .statusCode(HttpStatus.INTERNAL_SERVER_ERROR.name())
                 .timestamp(new Date()).build();
         return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
     }

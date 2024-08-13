@@ -98,10 +98,10 @@ src/
 
 ```mermaid
 sequenceDiagram
-FE->BE: signup 
-Note right of BE: request validation 
-BE-->FE: user 
-FE->>BE: login
+FE->BookingController: bookings 
+Note right of BE: request booking 
+BookingController-->BookingService: user 
+BookingService->: BookingService
 Note right of BE: validate username\npassword 
 BE-->FE: token 
 FE->BE: create account 
@@ -150,60 +150,91 @@ Request :-
 Response :- 200
 ````
 {
-  "id": 1,
+  "bookingReference": "1",
   "roomName": "Amaze",
-  "date": "2024-08-12",
-  "startTime": "05:50:00",
-  "endTime": "11:51:00",
-  "attendees": 1
+  "startTime": "00:45",
+  "endTime": "01:00",
+  "numberOfPeople": 1,
+  "status": "BOOKED"
 }
 ````
-Response:- validation error
+Response:- Number of attendees must be at least 1
 ````
 {
-  "statusCode": 400,
-  "timestamp": "2024-08-12T19:34:00.558+00:00",
-  "message": "[FieldName:-attendees, ErrorMessage:-Number of attendees must be at least 1 ==== ]",
-  "description": "VALIDATION_ERROR"
+  "statusCode": "BAD_REQUEST",
+  "timestamp": "2024-08-13T13:47:47.416+00:00",
+  "message": "[FieldName:-attendees, ErrorMessage:-Number of attendees must be at least 1.]"
 }
 ````
-Response:- start time / endtime error formate
+Response:- start time / end time error format
 ````
 {
-  "statusCode": 400,
-  "timestamp": "2024-08-12T19:34:49.550+00:00",
-  "message": "[FieldName:-startTime, ErrorMessage:-Start time must be in the format HH:mm]",
-  "description": "VALIDATION_ERROR"
+  "statusCode": "BAD_REQUEST",
+  "timestamp": "2024-08-13T13:47:02.480+00:00",
+  "message": "[FieldName:-startTime, ErrorMessage:-Start time must be in the format HH:mm]"
 }
 ````
 
 Response:- No available room
 ````
 {
-  "statusCode": 404,
-  "timestamp": "2024-08-12T20:14:50.720+00:00",
-  "message": "No available room for the specified time and attendees.",
-  "description": "NOT_FOUND_ERROR"
+  "statusCode": "NO_ROOM_AVAILABLE",
+  "timestamp": "2024-08-13T13:46:20.512+00:00",
+  "message": "No available room for the specified time and attendees."
+}
+````
+Response:- maintenance time
+````
+{
+  "statusCode": "MAINTENANCE_TIME_ERROR",
+  "timestamp": "2024-08-13T13:44:42.369+00:00",
+  "message": "Booking cannot be done during maintenance time."
+}
+````
+Response:- Booking Start Time must be lesser than End Time.
+````
+{
+  "statusCode": "BOOKING_TIME_ERROR",
+  "timestamp": "2024-08-13T13:55:50.735+00:00",
+  "message": "Booking Start Time must be lesser than End Time."
+}
+````
+
+Response:- intervals of 15 minutes.
+````
+{
+  "statusCode": "BOOKING_TIME_ERROR",
+  "timestamp": "2024-08-13T14:02:31.634+00:00",
+  "message": "Booking time should given by the user in intervals of 15 minutes."
 }
 ````
 
 #### Get Available Bookings
 URL:-
 ```
-http://localhost:8080/internal/v1/bookings?startTime=02%3A10&endTime=11%3A00
+http://localhost:8080/internal/v1/bookings/available-rooms?startTime=00%3A00&endTime=00%3A30
 ```
 Response:-
 ```
 {
-  "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJleHAiOjE2NTExNTUyODUsImlhdCI6MTY1MTEzNzI4NX0.9tdTwnWIq4vUrz08HL2SiuCMDhQaOd2BDgdoUryZKurPnX4aDObOc4MebRLAHWoEZ1FysBleYhVVttzVh_Ej3Q"
-}
-```
-```
-{
-  "statusCode": 401,
-  "timestamp": "2022-04-28T09:48:02.785+00:00",
-  "message": "Customer not found with email: string",
-  "description": "UNAUTHORIZED_ERROR"
+  "availableRooms": [
+    {
+      "roomName": "Amaze",
+      "maxCapacity": 3
+    },
+    {
+      "roomName": "Beauty",
+      "maxCapacity": 7
+    },
+    {
+      "roomName": "Inspire",
+      "maxCapacity": 12
+    },
+    {
+      "roomName": "Strive",
+      "maxCapacity": 20
+    }
+  ]
 }
 ```
 ### End
