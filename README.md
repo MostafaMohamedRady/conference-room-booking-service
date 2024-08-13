@@ -23,8 +23,8 @@ This is a REST API for booking conference rooms within a company.
 
 #### DOCKER
    ````shell
-    docker build --tag=barka-application:latest
-    docker run -p8081:8080 barka-application:latest
+    docker build --tag=conference-room-booking-service:latest .
+    docker run -p8081:8080 conference-room-booking-service:latest
    ````
 
 #### Maven

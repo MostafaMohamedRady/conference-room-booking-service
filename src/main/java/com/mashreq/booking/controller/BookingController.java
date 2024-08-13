@@ -3,7 +3,6 @@ package com.mashreq.booking.controller;
 import com.mashreq.booking.dto.AvailableBookingsResponseDto;
 import com.mashreq.booking.dto.BookingRequestDto;
 import com.mashreq.booking.dto.BookingResponseDto;
-import com.mashreq.booking.entity.BookingEntity;
 import com.mashreq.booking.service.BookingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -19,7 +18,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/internal/v1/bookings")
