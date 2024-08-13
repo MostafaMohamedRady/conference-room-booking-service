@@ -5,6 +5,7 @@ import com.mashreq.booking.dto.BookingRequestDto;
 import com.mashreq.booking.dto.BookingResponseDto;
 import com.mashreq.booking.entity.BookingEntity;
 import com.mashreq.booking.entity.ConferenceRoomEntity;
+import com.mashreq.booking.exception.InvalidBookingRequestException;
 import com.mashreq.booking.exception.RoomNotAvailableException;
 import com.mashreq.booking.mapper.BookingsMapper;
 import com.mashreq.booking.repository.BookingRepository;
@@ -102,6 +103,21 @@ class BookingServiceImplTest {
 
             bookingService.bookRoom(bookingRequestDto);
         });
+    }
+
+    @Test
+    void testBookRoom_MaintenanceTime() {
+        InvalidBookingRequestException invalidBookingRequestException = Assertions.assertThrows(InvalidBookingRequestException.class, () -> {
+            BookingRequestDto bookingRequestDto = BookingRequestDto.builder()
+                    .attendees(1)
+                    .startTime("09:00")
+                    .endTime("09:15")
+                    .build();
+
+            bookingService.bookRoom(bookingRequestDto);
+        });
+
+        Assertions.assertEquals("Booking cannot be done during maintenance time.", invalidBookingRequestException.getMessage());
     }
 
     @Test
