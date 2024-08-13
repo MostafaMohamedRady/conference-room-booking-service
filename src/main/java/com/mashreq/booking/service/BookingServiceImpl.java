@@ -32,6 +32,11 @@ public class BookingServiceImpl implements BookingService {
     private final BookingTimeValidator bookingTimeValidator;
     private final BookingsMapper bookingsMapper;
 
+    /**
+     *
+     * @param requestDto
+     * @return
+     */
     @Override
     @Transactional
     public BookingResponseDto bookRoom(BookingRequestDto requestDto) {

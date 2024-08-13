@@ -10,6 +10,12 @@ import java.time.LocalTime;
 @Service
 public class BookingTimeValidator {
 
+    /**
+     * Booking can be done only in intervals of 15 mins, 2:00 - 2:15 or 2:00 - 2:30 or 2:00 - 3:00
+     * Start Time will always be lesser than End Time.
+     * @param startTime
+     * @param endTime
+     */
     public void validate(LocalTime startTime, LocalTime endTime) {
         log.info("Validate Booking Time");
         if (!startTime.isBefore(endTime)){

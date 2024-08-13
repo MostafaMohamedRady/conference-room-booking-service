@@ -20,6 +20,12 @@ public class MaintenanceTimeValidator {
     );
 
 
+    /**
+     * Booking cannot be done during maintenance time, if a booking overlaps
+     * maintenance a message should be displayed stating the same.
+     * @param startTime
+     * @param endTime
+     */
     public void validate(LocalTime startTime, LocalTime endTime) {
         log.info("Validate Maintenance Time");
         for (LocalTime[] maintenanceTime : maintenanceTimings) {

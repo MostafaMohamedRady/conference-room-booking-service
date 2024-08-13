@@ -67,6 +67,8 @@ src/
 │   │               │   └── BookingController.java
 │   │               ├── dto/
 │   │               │   └── BookingRequest.java
+│   │               │   └── BookingResponseDto.java
+│   │               │   └── AvailableBookingsResponseDto.java
 │   │               ├── exception/
 │   │               │   ├── GlobalExceptionHandler.java
 │   │               │   ├── InvalidBookingRequestException.java
@@ -98,33 +100,15 @@ src/
 
 ```mermaid
 sequenceDiagram
-FE->BookingController: bookings 
-Note right of BE: request booking 
-BookingController-->BookingService: user 
-BookingService->: BookingService
-Note right of BE: validate username\npassword 
-BE-->FE: token 
-FE->BE: create account 
-Note right of BE: validate acount details 
-BE->DB:save account
-BE-->FE: accountNo 
-FE->BE: money-deposit
-BE->BE:check-account-active
-BE->DB:topup account balance \n save transaction
-BE-->FE: reference number 
-FE->BE: money-withdrwal
-BE->BE:check-account-active \n check-balance
-BE->DB:deduct from account balance \n save transaction
-BE-->FE: reference number 
-FE->BE: local-transfer
-BE->BE:check-from-account-active
-BE->BE:check-from-account-balance
-BE->DB:deduct from account balance 
-BE->DB:save from account transaction 
-BE->BE:check-to-account-active
-BE->DB:topup to account balance 
-BE->DB:save to account transaction 
-BE-->FE: reference number 
+FE->>BookingController: book a room 
+Note right of BookingController: request validation 
+BookingController-->>BookingService: book a room  
+BookingService->>BookingService: validate maintenance
+BookingService->>BookingService: validate booking time
+BookingService-->>BookingRepository: get rooms by time
+BookingService->>BookingService: validate available rooms 
+BookingService-->>BookingRepository: book a room
+BookingService->>FE: booking response
 ```
 
 ## API Endpoints

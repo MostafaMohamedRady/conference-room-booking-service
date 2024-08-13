@@ -21,7 +21,9 @@ public class AvailableBookingsResponseDto {
     @ToString
     @Builder
     public static class AvailableRoomDto {
+        @Schema(name = "roomName", description = "Room Name.")
         private String roomName;
+        @Schema(name = "maxCapacity", description = "Room Capacity.")
         private Integer maxCapacity;
     }
 }
