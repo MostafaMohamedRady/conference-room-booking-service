@@ -113,9 +113,6 @@ BookingService->>FE: booking response
 
 ## API Endpoints
 
-#### Postman Collection
-[postman_collection.zip](https://github.com/MostafaMohamedRady/barak-banking/files/8599021/baraka-application.postman_collection.json.zip)
-
 #### Book a Room
 
 URL :-
